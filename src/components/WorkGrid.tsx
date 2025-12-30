@@ -2,20 +2,13 @@ import React from 'react';
 import { cn } from '../utils/cn';
 import { Reveal } from './Reveal';
 import { Link } from 'react-router-dom';
-
-// Matching the reference colors/textures
-const IMAGES = {
-  purple: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2400&auto=format&fit=crop", // Relation
-  blue: "https://images.unsplash.com/photo-1531297461136-82lw9z1p7e9d?q=80&w=2400&auto=format&fit=crop", // Grey Space (Blueish)
-  white: "https://images.unsplash.com/photo-1595429035839-c99c298ffdde?q=80&w=2400&auto=format&fit=crop", // Reflections (White/Clean)
-  beige: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2400&auto=format&fit=crop", // Bubble (Beige)
-  green: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=2400&auto=format&fit=crop", // React (Green)
-};
+import { projects } from '../data/projects';
 
 interface WorkItemProps {
   image: string;
   title: string;
   index: string;
+  id: string;
   className?: string;
   imageHeight?: string;
   fullWidth?: boolean;
@@ -25,11 +18,12 @@ const WorkItem: React.FC<WorkItemProps> = ({
   image, 
   title, 
   index, 
+  id,
   className, 
   imageHeight = "h-[420px]", 
   fullWidth = false
 }) => (
-  <div className={cn("flex flex-col gap-4 group w-full cursor-pointer", className)}>
+  <Link to={`/work/${id}`} className={cn("flex flex-col gap-4 group w-full cursor-pointer", className)}>
     <Reveal>
       <div 
         className={cn(
@@ -55,7 +49,7 @@ const WorkItem: React.FC<WorkItemProps> = ({
         {index}
       </span>
     </div>
-  </div>
+  </Link>
 );
 
 export const WorkGrid: React.FC = () => {
@@ -75,52 +69,57 @@ export const WorkGrid: React.FC = () => {
       {/* WORK GRID */}
       <div className="flex flex-col w-full">
 
-        {/* ROW 1: Split (Purple / Blue) */}
+        {/* ROW 1: Split */}
         <div className="flex flex-col md:flex-row gap-[32px] md:gap-[40px] mb-[64px] md:mb-[96px]">
           <div className="w-full md:w-1/2">
             <WorkItem 
-              image={IMAGES.purple}
-              title="Relation"
-              index="001"
+              image={projects[0].gridImage}
+              title={projects[0].title}
+              index={projects[0].index}
+              id={projects[0].id}
               imageHeight="h-[320px] md:h-[420px]"
             />
           </div>
           <div className="w-full md:w-1/2 md:mt-12"> {/* Staggered look */}
             <WorkItem 
-              image={IMAGES.blue}
-              title="Grey Space"
-              index="002"
+              image={projects[1].gridImage}
+              title={projects[1].title}
+              index={projects[1].index}
+              id={projects[1].id}
               imageHeight="h-[320px] md:h-[420px]"
             />
           </div>
         </div>
 
-        {/* ROW 2: Full Width (White) */}
+        {/* ROW 2: Full Width */}
         <div className="w-full mb-[80px] md:mb-[100px]">
           <WorkItem 
-            image={IMAGES.white}
-            title="Reflections"
-            index="003"
+            image={projects[2].gridImage}
+            title={projects[2].title}
+            index={projects[2].index}
+            id={projects[2].id}
             imageHeight="h-[400px] md:h-[680px]"
             fullWidth
           />
         </div>
 
-        {/* ROW 3: Split (Beige / Green) */}
+        {/* ROW 3: Split */}
         <div className="flex flex-col md:flex-row gap-[32px] md:gap-[40px] mb-[80px] md:mb-[100px]">
           <div className="w-full md:w-[40%]">
             <WorkItem 
-              image={IMAGES.beige}
-              title="Bubble Introduction"
-              index="004"
+              image={projects[3].gridImage}
+              title={projects[3].title}
+              index={projects[3].index}
+              id={projects[3].id}
               imageHeight="h-[300px] md:h-[380px]"
             />
           </div>
           <div className="w-full md:w-[60%]">
             <WorkItem 
-              image={IMAGES.green}
-              title="React"
-              index="005"
+              image={projects[4].gridImage}
+              title={projects[4].title}
+              index={projects[4].index}
+              id={projects[4].id}
               imageHeight="h-[360px] md:h-[500px]"
             />
           </div>

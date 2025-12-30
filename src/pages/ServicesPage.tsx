@@ -73,6 +73,16 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ title, description, tag
   </div>
 );
 
+// Reusing project images + extras for consistent visual language
+const IMG_RELATION = "https://www.dropbox.com/scl/fi/3pnz9pgh97018aef11zs5/2148792986.avif?rlkey=dla4wtgu4nkjw9mq3dg7gwioa&st=3a6bkufm&raw=1";
+const IMG_GREY_SPACE = "https://www.dropbox.com/scl/fi/cg4843m1hx0c1eakcg425/3d-rendered-abstract-design-elements-composition.avif?rlkey=rhgofq07xd0crxa9z1blepih3&st=hxqcqmhn&raw=1";
+const IMG_REFLECTIONS = "https://www.dropbox.com/scl/fi/r85x2ktupilytyu094slu/envato-labs-image-edit-19.avif?rlkey=yg5zv0uxa4m2aah69z1x0qyvr&st=5yr9ewc0&raw=1";
+const IMG_BUBBLE = "https://www.dropbox.com/scl/fi/ih7guwro5yjfm9677o3og/20849708_6364976.avif?rlkey=rye7rt3g1v4w4sfuirsxk3jki&st=huzug4iz&raw=1";
+const IMG_REACT = "https://www.dropbox.com/scl/fi/ahbp985x38l5cqy59r56w/9866.avif?rlkey=xb19w8wmgp091u4bobwh7a51x&st=wk7rx4gi&raw=1";
+const IMG_EXTRA_1 = "https://www.dropbox.com/scl/fi/rjfdd1nb4kmoh94bdlouj/20443691_6299913-1.avif?rlkey=oidi0idkunyto4w0uk1kndlc7&st=ogun4h9t&raw=1";
+const IMG_EXTRA_2 = "https://www.dropbox.com/scl/fi/1v6ykynb49wnwuh0f7kwp/74879019_9808781.avif?rlkey=3yx3po8nqcplwjj5mkk7bhpyp&st=eeujr2vn&raw=1";
+const IMG_EXTRA_3 = "https://www.dropbox.com/scl/fi/z8ov7vjd2ydtesx0xvkob/8422370_3897478.avif?rlkey=2bptpi5sysgnnz832qxr8jcx2&st=dyeny17s&raw=1";
+
 export const ServicesPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -106,9 +116,9 @@ export const ServicesPage: React.FC = () => {
             description="Great ideas need clear, human-centred visuals. We turn insight into brands, user-interfaces and motion that feels right."
             tags={['Website design', 'Product design', 'Brand identity systems', 'Rapid prototyping', 'Design systems']}
             images={{
-              large: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2400&auto=format&fit=crop",
-              smallTop: "https://images.unsplash.com/photo-1531297461136-82lw9z1p7e9d?q=80&w=2400&auto=format&fit=crop",
-              smallBottom: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2400&auto=format&fit=crop"
+              large: IMG_RELATION,
+              smallTop: IMG_EXTRA_2,
+              smallBottom: IMG_EXTRA_1
             }}
           />
 
@@ -117,9 +127,9 @@ export const ServicesPage: React.FC = () => {
             description="We bring the experience to live in working code. Fast, accessible and future-proof builds turn sketches into stable, scalable products."
             tags={['Web app development', 'Front-end engineering', 'Shopify & headless ecommerce', 'Performance audits']}
             images={{
-              large: "https://images.unsplash.com/photo-1595429035839-c99c298ffdde?q=80&w=2400&auto=format&fit=crop",
-              smallTop: "https://images.unsplash.com/photo-1507643179173-617d6a798696?q=80&w=2400&auto=format&fit=crop",
-              smallBottom: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2400&auto=format&fit=crop"
+              large: IMG_REACT,
+              smallTop: IMG_BUBBLE,
+              smallBottom: IMG_EXTRA_3
             }}
           />
 
@@ -128,9 +138,9 @@ export const ServicesPage: React.FC = () => {
             description="Launches should land with impact. We pair data, story and design to drive awareness, adoption and growth."
             tags={['Social media campaigns', 'Content & email marketing', 'Paid search', 'SEO strategy', 'Launch asset kits']}
             images={{
-              large: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=2400&auto=format&fit=crop",
-              smallTop: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=2400&auto=format&fit=crop",
-              smallBottom: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=2400&auto=format&fit=crop"
+              large: IMG_REFLECTIONS,
+              smallTop: IMG_GREY_SPACE,
+              smallBottom: IMG_EXTRA_2
             }}
           />
 

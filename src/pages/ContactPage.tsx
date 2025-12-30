@@ -3,9 +3,10 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
 import { Reveal } from '../components/Reveal';
+import { InfiniteMarquee } from '../components/InfiniteMarquee';
 
 // Logo Ticker Data (Reused)
-const LOGOS = ['IRENE', 'Slice', 'n.a', 'SOMEDAY', 'Compose', 'Accent', 'IRENE', 'Slice', 'n.a', 'SOMEDAY', 'Compose'];
+const LOGOS = ['IRENE', 'Slice', 'n.a', 'SOMEDAY', 'Compose', 'Accent'];
 
 export const ContactPage: React.FC = () => {
   useEffect(() => {
@@ -183,13 +184,17 @@ export const ContactPage: React.FC = () => {
 
         {/* LOGO TICKER */}
         <div className="w-full max-w-content px-6 md:px-10 mx-auto mb-[120px]">
-           <div className="flex justify-between items-center opacity-100 overflow-x-auto gap-12 md:gap-24 pb-4">
-              {LOGOS.map((name, i) => (
-                 <span key={i} className={`text-[24px] md:text-[28px] text-black whitespace-nowrap font-bold font-sans`}>
-                    {name}
-                 </span>
-              ))}
-           </div>
+           <InfiniteMarquee 
+             items={LOGOS}
+             speed={25}
+             hoverSpeed={50}
+             itemClassName="gap-12 md:gap-24 pr-12 md:pr-24"
+             renderItem={(name) => (
+                <span className="text-[24px] md:text-[28px] text-black whitespace-nowrap font-bold font-sans">
+                  {name}
+                </span>
+             )}
+           />
         </div>
 
         <CTABanner />

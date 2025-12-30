@@ -5,8 +5,11 @@ import { WorkPage } from './pages/WorkPage';
 import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { InsightsPage } from './pages/InsightsPage';
+import { InsightDetailPage } from './pages/InsightDetailPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsConditions } from './pages/TermsConditions';
 
 function App() {
   return (
@@ -17,8 +20,11 @@ function App() {
         <Route path="/work/:id" element={<ProjectDetailPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/insights" element={<InsightsPage />} />
+        <Route path="/insights/:id" element={<InsightDetailPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsConditions />} />
       </Routes>
     </Router>
   );

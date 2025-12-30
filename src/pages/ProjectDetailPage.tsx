@@ -23,6 +23,12 @@ export const ProjectDetailPage: React.FC = () => {
   // Filter other projects for "More Work"
   const otherProjects = projects.filter(p => p.id !== id).slice(0, 2);
 
+  // Gallery images for the section above Outcomes
+  const galleryImages = [
+    "https://images.unsplash.com/photo-1507643179173-617d6a798696?q=80&w=2400&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2400&auto=format&fit=crop"
+  ];
+
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans">
       <Navbar />
@@ -113,18 +119,16 @@ export const ProjectDetailPage: React.FC = () => {
         </section>
 
         {/* IMAGE CONTINUATION (Abstract/Texture) */}
+        {/* Logic modified to exclude last 2 images as requested. Since there are only 2, this renders nothing. */}
         <section className="w-full max-w-content px-6 md:px-10 mx-auto mb-[100px] md:mb-[140px]">
            <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px] md:gap-[40px]">
-              <Reveal width="100%">
-                 <div className="w-full aspect-[3/4] bg-gray-100 rounded-[20px] overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507643179173-617d6a798696?q=80&w=2400&auto=format&fit=crop" alt="Texture 1" className="w-full h-full object-cover" />
-                 </div>
-              </Reveal>
-              <Reveal width="100%" delay={0.2}>
-                 <div className="w-full aspect-[3/4] bg-gray-100 rounded-[20px] overflow-hidden md:mt-24">
-                    <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2400&auto=format&fit=crop" alt="Texture 2" className="w-full h-full object-cover" />
-                 </div>
-              </Reveal>
+              {galleryImages.slice(0, -2).map((img, idx) => (
+                 <Reveal key={idx} width="100%" delay={idx * 0.2}>
+                    <div className={`w-full aspect-[3/4] bg-gray-100 rounded-[20px] overflow-hidden ${idx === 1 ? 'md:mt-24' : ''}`}>
+                       <img src={img} alt={`Texture ${idx + 1}`} className="w-full h-full object-cover" />
+                    </div>
+                 </Reveal>
+              ))}
            </div>
         </section>
 

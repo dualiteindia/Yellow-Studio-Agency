@@ -19,6 +19,18 @@ export interface Project {
   };
 }
 
+// Image Constants
+const IMG_RELATION = "https://www.dropbox.com/scl/fi/3pnz9pgh97018aef11zs5/2148792986.avif?rlkey=dla4wtgu4nkjw9mq3dg7gwioa&st=3a6bkufm&raw=1";
+const IMG_GREY_SPACE = "https://www.dropbox.com/scl/fi/cg4843m1hx0c1eakcg425/3d-rendered-abstract-design-elements-composition.avif?rlkey=rhgofq07xd0crxa9z1blepih3&st=hxqcqmhn&raw=1";
+const IMG_REFLECTIONS = "https://www.dropbox.com/scl/fi/r85x2ktupilytyu094slu/envato-labs-image-edit-19.avif?rlkey=yg5zv0uxa4m2aah69z1x0qyvr&st=5yr9ewc0&raw=1";
+const IMG_BUBBLE = "https://www.dropbox.com/scl/fi/ih7guwro5yjfm9677o3og/20849708_6364976.avif?rlkey=rye7rt3g1v4w4sfuirsxk3jki&st=huzug4iz&raw=1";
+const IMG_REACT = "https://www.dropbox.com/scl/fi/ahbp985x38l5cqy59r56w/9866.avif?rlkey=xb19w8wmgp091u4bobwh7a51x&st=wk7rx4gi&raw=1";
+const IMG_BUY_HEJ = "https://www.dropbox.com/scl/fi/rjfdd1nb4kmoh94bdlouj/20443691_6299913-1.avif?rlkey=oidi0idkunyto4w0uk1kndlc7&st=ogun4h9t&raw=1"; // Extra 1
+
+// Extra Images for details
+const IMG_EXTRA_2 = "https://www.dropbox.com/scl/fi/1v6ykynb49wnwuh0f7kwp/74879019_9808781.avif?rlkey=3yx3po8nqcplwjj5mkk7bhpyp&st=eeujr2vn&raw=1";
+const IMG_EXTRA_3 = "https://www.dropbox.com/scl/fi/z8ov7vjd2ydtesx0xvkob/8422370_3897478.avif?rlkey=2bptpi5sysgnnz832qxr8jcx2&st=dyeny17s&raw=1";
+
 export const projects: Project[] = [
   {
     id: "relation",
@@ -26,12 +38,9 @@ export const projects: Project[] = [
     title: "RELATION",
     category: "Branding / UI",
     year: "2024",
-    heroImage: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2400&auto=format&fit=crop",
-    gridImage: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2400&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2400&auto=format&fit=crop",
-    ],
+    heroImage: IMG_RELATION,
+    gridImage: IMG_RELATION,
+    images: [IMG_EXTRA_2, IMG_EXTRA_3],
     description: "A complete brand overhaul for a modern dating app focusing on meaningful connections.",
     process: {
       title: "PROCESS",
@@ -53,12 +62,9 @@ export const projects: Project[] = [
     title: "GREY SPACE",
     category: "Architecture",
     year: "2023",
-    heroImage: "https://images.unsplash.com/photo-1531297461136-82lw9z1p7e9d?q=80&w=2400&auto=format&fit=crop",
-    gridImage: "https://images.unsplash.com/photo-1531297461136-82lw9z1p7e9d?q=80&w=2400&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2400&auto=format&fit=crop",
-    ],
+    heroImage: IMG_GREY_SPACE,
+    gridImage: IMG_GREY_SPACE,
+    images: [IMG_EXTRA_3, IMG_RELATION],
     description: "Minimalist architectural visualization for a new cultural center in Copenhagen.",
     process: {
       title: "PROCESS",
@@ -80,12 +86,9 @@ export const projects: Project[] = [
     title: "REFLECTIONS",
     category: "Art Direction",
     year: "2024",
-    heroImage: "https://images.unsplash.com/photo-1595429035839-c99c298ffdde?q=80&w=2400&auto=format&fit=crop",
-    gridImage: "https://images.unsplash.com/photo-1595429035839-c99c298ffdde?q=80&w=2400&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1507643179173-617d6a798696?q=80&w=2400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1515462277126-2dd0c162007a?q=80&w=2400&auto=format&fit=crop",
-    ],
+    heroImage: IMG_REFLECTIONS,
+    gridImage: IMG_REFLECTIONS,
+    images: [IMG_EXTRA_2, IMG_GREY_SPACE],
     description: "An editorial campaign exploring the duality of modern fashion.",
     process: {
       title: "PROCESS",
@@ -107,12 +110,9 @@ export const projects: Project[] = [
     title: "BUBBLE INTRO",
     category: "Motion Design",
     year: "2023",
-    heroImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2400&auto=format&fit=crop",
-    gridImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2400&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=2400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=2400&auto=format&fit=crop",
-    ],
+    heroImage: IMG_BUBBLE,
+    gridImage: IMG_BUBBLE,
+    images: [IMG_EXTRA_3, IMG_REFLECTIONS],
     description: "A playful, physics-based motion language for a fintech startup.",
     process: {
       title: "PROCESS",
@@ -134,12 +134,9 @@ export const projects: Project[] = [
     title: "REACT",
     category: "Development",
     year: "2024",
-    heroImage: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=2400&auto=format&fit=crop",
-    gridImage: "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?q=80&w=2400&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1531297461136-82lw9z1p7e9d?q=80&w=2400&auto=format&fit=crop",
-    ],
+    heroImage: IMG_REACT,
+    gridImage: IMG_REACT,
+    images: [IMG_EXTRA_2, IMG_BUBBLE],
     description: "A high-performance headless commerce build for a global retailer.",
     process: {
       title: "PROCESS",
@@ -161,12 +158,9 @@ export const projects: Project[] = [
     title: "BUY HEJ",
     category: "Ecommerce",
     year: "2023",
-    heroImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2400&auto=format&fit=crop",
-    gridImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2400&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1595429035839-c99c298ffdde?q=80&w=2400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2400&auto=format&fit=crop",
-    ],
+    heroImage: IMG_BUY_HEJ,
+    gridImage: IMG_BUY_HEJ,
+    images: [IMG_EXTRA_3, IMG_REACT],
     description: "Direct-to-consumer furniture brand launch.",
     process: {
       title: "PROCESS",

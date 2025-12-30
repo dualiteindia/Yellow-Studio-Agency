@@ -3,6 +3,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { CTABanner } from '../components/CTABanner';
 import { Reveal } from '../components/Reveal';
+import { InfiniteMarquee } from '../components/InfiniteMarquee';
 
 // Team Data
 const TEAM = [
@@ -30,6 +31,15 @@ const APPROACH = [
   { id: "004", title: "REFINE", desc: "We launch, learn from live data and iterate swiftly so the product keeps getting better with each release." }
 ];
 
+// Images for Mission Strip
+const IMG_EXTRA_1 = "https://www.dropbox.com/scl/fi/rjfdd1nb4kmoh94bdlouj/20443691_6299913-1.avif?rlkey=oidi0idkunyto4w0uk1kndlc7&st=ogun4h9t&raw=1";
+const IMG_EXTRA_2 = "https://www.dropbox.com/scl/fi/1v6ykynb49wnwuh0f7kwp/74879019_9808781.avif?rlkey=3yx3po8nqcplwjj5mkk7bhpyp&st=eeujr2vn&raw=1";
+const IMG_EXTRA_3 = "https://www.dropbox.com/scl/fi/z8ov7vjd2ydtesx0xvkob/8422370_3897478.avif?rlkey=2bptpi5sysgnnz832qxr8jcx2&st=dyeny17s&raw=1";
+const IMG_RELATION = "https://www.dropbox.com/scl/fi/3pnz9pgh97018aef11zs5/2148792986.avif?rlkey=dla4wtgu4nkjw9mq3dg7gwioa&st=3a6bkufm&raw=1";
+
+const MISSION_IMAGES = [IMG_EXTRA_1, IMG_EXTRA_2, IMG_EXTRA_3, IMG_RELATION];
+const LOGOS = ['IRENE', 'Slice', 'n.a', 'SOMEDAY', 'Compose', 'Accent'];
+
 export const AboutPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -56,14 +66,20 @@ export const AboutPage: React.FC = () => {
         </section>
 
         {/* MISSION SECTION (Horizontal Scroll Look) */}
-        <section className="w-full mb-[120px] overflow-hidden">
-           {/* Image Strip */}
-           <div className="flex gap-6 mb-16 px-6 md:px-10 overflow-x-auto no-scrollbar pb-4">
-              {[1,2,3,4].map((i) => (
-                 <div key={i} className="flex-shrink-0 w-[280px] md:w-[400px] aspect-[4/5] bg-gray-100 rounded-[20px] overflow-hidden">
-                    <img src={`https://images.unsplash.com/photo-${i === 1 ? '1550684848-fac1c5b4e853' : i === 2 ? '1531297461136-82lw9z1p7e9d' : i === 3 ? '1595429035839-c99c298ffdde' : '1586023492125-27b2c045efd7'}?q=80&w=1200&auto=format&fit=crop`} className="w-full h-full object-cover" alt="Studio" />
-                 </div>
-              ))}
+        <section className="w-full mb-[120px]">
+           {/* Image Strip - Infinite Marquee */}
+           <div className="mb-16">
+              <InfiniteMarquee 
+                items={MISSION_IMAGES}
+                speed={40}
+                hoverSpeed={80}
+                itemClassName="gap-6 pr-6"
+                renderItem={(img, i) => (
+                   <div className="flex-shrink-0 w-[280px] md:w-[400px] aspect-[4/5] bg-gray-100 rounded-[20px] overflow-hidden">
+                      <img src={img} className="w-full h-full object-cover" alt="Studio" />
+                   </div>
+                )}
+              />
            </div>
 
            {/* Mission Text */}
@@ -82,13 +98,19 @@ export const AboutPage: React.FC = () => {
            </div>
         </section>
 
-        {/* LOGO TICKER (Reused from Home/WhoWeAre logic but static here or similar) */}
+        {/* LOGO TICKER */}
         <div className="w-full max-w-content px-6 md:px-10 mx-auto mb-[120px] border-t border-gray-100 pt-12">
-           <div className="flex justify-between items-center opacity-40 grayscale overflow-x-auto gap-12">
-              {['IRENE', 'Slice', 'n.a', 'SOMEDAY', 'Compose', 'Accent', 'IRENE'].map((name, i) => (
-                 <span key={i} className="text-[20px] font-bold font-sans text-black whitespace-nowrap">{name}</span>
-              ))}
-           </div>
+           <InfiniteMarquee 
+             items={LOGOS}
+             speed={25}
+             hoverSpeed={50}
+             itemClassName="gap-12 md:gap-24 pr-12 md:pr-24"
+             renderItem={(name) => (
+                <span className="text-[20px] font-bold font-sans text-black whitespace-nowrap opacity-40 grayscale hover:opacity-100 transition-opacity duration-300">
+                  {name}
+                </span>
+             )}
+           />
         </div>
 
         {/* TEAM GRID */}

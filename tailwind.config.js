@@ -21,6 +21,15 @@ module.exports = {
       letterSpacing: {
         'nav': '0.08em',
         'label': '0.14em',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        }
+      },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
       }
     }
   },

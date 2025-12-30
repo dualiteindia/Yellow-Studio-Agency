@@ -1,5 +1,6 @@
 import React from 'react';
 import { Reveal } from './Reveal';
+import { InfiniteMarquee } from './InfiniteMarquee';
 
 // Text logos as per reference
 const LOGOS = [
@@ -9,9 +10,6 @@ const LOGOS = [
   { name: 'SOMEDAY', font: 'font-sans font-extrabold' },
   { name: 'Compose', font: 'font-serif' },
   { name: 'Accent', font: 'font-sans font-light' },
-  { name: 'IRENE', font: 'font-sans font-bold' },
-  { name: 'Slice', font: 'font-serif italic' },
-  { name: 'n.a', font: 'font-sans font-black' },
 ];
 
 export const WhoWeAre: React.FC = () => {
@@ -49,14 +47,18 @@ export const WhoWeAre: React.FC = () => {
       </div>
 
       {/* Logo Ticker */}
-      <div className="w-full border-t border-gray-100 pt-12 overflow-hidden">
-        <div className="flex justify-between items-center opacity-40 grayscale hover:opacity-100 transition-opacity duration-500 overflow-x-auto no-scrollbar gap-12 md:gap-0">
-          {LOGOS.map((logo, i) => (
-            <span key={i} className={`text-[24px] md:text-[28px] text-black whitespace-nowrap ${logo.font}`}>
+      <div className="w-full border-t border-gray-100 pt-12">
+        <InfiniteMarquee 
+          items={LOGOS}
+          speed={20}
+          hoverSpeed={40}
+          itemClassName="gap-12 md:gap-24 pr-12 md:pr-24"
+          renderItem={(logo) => (
+            <span className={`text-[24px] md:text-[28px] text-black whitespace-nowrap opacity-40 grayscale hover:opacity-100 transition-opacity duration-300 ${logo.font}`}>
               {logo.name}
             </span>
-          ))}
-        </div>
+          )}
+        />
       </div>
     </section>
   );
