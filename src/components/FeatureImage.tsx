@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Using the provided Dropbox video (raw=1 for direct stream)
+// Using the provided Vercel Blob video
 const HERO_VIDEO =
-  "https://www.dropbox.com/scl/fi/lzqy2p19hd2z8afjf58eh/3d-cartoon-character-dancing-on-yellow-background-2025-12-09-12-50-41-utc.webm?rlkey=si14mekr5au4wx3s27wvwv7o2&st=xl0p4p04&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/3d-cartoon-character-dancing-on-yellow-background-2025-12-09-12-50-41-utc.webm";
 
 export const FeatureImage: React.FC = () => {
   return (

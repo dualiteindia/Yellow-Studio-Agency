@@ -95,13 +95,13 @@ const APPROACH = [
 
 // Images for Mission Strip
 const IMG_EXTRA_1 =
-  "https://www.dropbox.com/scl/fi/rjfdd1nb4kmoh94bdlouj/20443691_6299913-1.avif?rlkey=oidi0idkunyto4w0uk1kndlc7&st=ogun4h9t&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/20443691_6299913-1.avif";
 const IMG_EXTRA_2 =
-  "https://www.dropbox.com/scl/fi/1v6ykynb49wnwuh0f7kwp/74879019_9808781.avif?rlkey=3yx3po8nqcplwjj5mkk7bhpyp&st=eeujr2vn&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/74879019_9808781.avif";
 const IMG_EXTRA_3 =
-  "https://www.dropbox.com/scl/fi/z8ov7vjd2ydtesx0xvkob/8422370_3897478.avif?rlkey=2bptpi5sysgnnz832qxr8jcx2&st=dyeny17s&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/8422370_3897478.avif";
 const IMG_RELATION =
-  "https://www.dropbox.com/scl/fi/3pnz9pgh97018aef11zs5/2148792986.avif?rlkey=dla4wtgu4nkjw9mq3dg7gwioa&st=3a6bkufm&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/2148792986.avif";
 
 const MISSION_IMAGES = [IMG_EXTRA_1, IMG_EXTRA_2, IMG_EXTRA_3, IMG_RELATION];
 const LOGOS = ["IRENE", "Slice", "n.a", "SOMEDAY", "Compose", "Accent"];

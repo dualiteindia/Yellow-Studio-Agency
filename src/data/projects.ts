@@ -21,23 +21,23 @@ export interface Project {
 
 // Image Constants
 const IMG_RELATION =
-  "https://www.dropbox.com/scl/fi/3pnz9pgh97018aef11zs5/2148792986.avif?rlkey=dla4wtgu4nkjw9mq3dg7gwioa&st=3a6bkufm&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/2148792986.avif";
 const IMG_GREY_SPACE =
-  "https://www.dropbox.com/scl/fi/cg4843m1hx0c1eakcg425/3d-rendered-abstract-design-elements-composition.avif?rlkey=rhgofq07xd0crxa9z1blepih3&st=hxqcqmhn&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/3d-rendered-abstract-design-elements-composition.avif";
 const IMG_REFLECTIONS =
-  "https://www.dropbox.com/scl/fi/r85x2ktupilytyu094slu/envato-labs-image-edit-19.avif?rlkey=yg5zv0uxa4m2aah69z1x0qyvr&st=5yr9ewc0&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/envato-labs-image-edit-19.avif";
 const IMG_BUBBLE =
-  "https://www.dropbox.com/scl/fi/ih7guwro5yjfm9677o3og/20849708_6364976.avif?rlkey=rye7rt3g1v4w4sfuirsxk3jki&st=huzug4iz&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/20849708_6364976.avif";
 const IMG_REACT =
-  "https://www.dropbox.com/scl/fi/ahbp985x38l5cqy59r56w/9866.avif?rlkey=xb19w8wmgp091u4bobwh7a51x&st=wk7rx4gi&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/9866.avif";
 const IMG_BUY_HEJ =
-  "https://www.dropbox.com/scl/fi/rjfdd1nb4kmoh94bdlouj/20443691_6299913-1.avif?rlkey=oidi0idkunyto4w0uk1kndlc7&st=ogun4h9t&raw=1"; // Extra 1
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/20443691_6299913-1.avif"; // Extra 1
 
 // Extra Images for details
 const IMG_EXTRA_2 =
-  "https://www.dropbox.com/scl/fi/1v6ykynb49wnwuh0f7kwp/74879019_9808781.avif?rlkey=3yx3po8nqcplwjj5mkk7bhpyp&st=eeujr2vn&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/74879019_9808781.avif";
 const IMG_EXTRA_3 =
-  "https://www.dropbox.com/scl/fi/z8ov7vjd2ydtesx0xvkob/8422370_3897478.avif?rlkey=2bptpi5sysgnnz832qxr8jcx2&st=dyeny17s&raw=1";
+  "https://69sfgmk1pv2omedb.public.blob.vercel-storage.com/new-templates/yellow/8422370_3897478.avif";
 
 export const projects: Project[] = [
   {
