@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { cn } from '../utils/cn';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface RevealProps {
   children: React.ReactNode;
@@ -9,7 +8,12 @@ interface RevealProps {
   width?: "fit-content" | "100%";
 }
 
-export const Reveal: React.FC<RevealProps> = ({ children, className, delay = 0, width = "100%" }) => {
+export const Reveal: React.FC<RevealProps> = ({
+  children,
+  className,
+  delay = 0,
+  width = "100%",
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
 

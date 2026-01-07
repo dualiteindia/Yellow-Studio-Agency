@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
-import { Reveal } from '../components/Reveal';
+import React, { useEffect } from "react";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+import { Reveal } from "../components/Reveal";
 
 export const PrivacyPolicy: React.FC = () => {
   useEffect(() => {
@@ -11,9 +11,8 @@ export const PrivacyPolicy: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans">
       <Navbar />
-      
+
       <main className="w-full flex-grow flex flex-col items-center">
-        
         <section className="w-full max-w-[800px] px-6 md:px-10 mx-auto pt-[120px] pb-[120px]">
           <Reveal>
             <h1 className="font-serif font-normal text-[48px] md:text-[64px] leading-[0.9] text-black mb-12 uppercase">
@@ -23,41 +22,69 @@ export const PrivacyPolicy: React.FC = () => {
 
           <Reveal delay={0.1}>
             <div className="flex flex-col gap-8 text-[15px] md:text-[16px] leading-[1.6] text-[#222]">
+              <p>Last updated: June 2025</p>
               <p>
-                Last updated: June 2025
-              </p>
-              <p>
-                At Yellow Studio, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
-              </p>
-              
-              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">1. Information We Collect</h2>
-              <p>
-                We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows: Identity Data, Contact Data, Technical Data, and Usage Data.
+                At Yellow Studio, we respect your privacy and are committed to
+                protecting your personal data. This privacy policy will inform
+                you as to how we look after your personal data when you visit
+                our website and tell you about your privacy rights and how the
+                law protects you.
               </p>
 
-              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">2. How We Use Your Data</h2>
+              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">
+                1. Information We Collect
+              </h2>
               <p>
-                We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
+                We may collect, use, store and transfer different kinds of
+                personal data about you which we have grouped together follows:
+                Identity Data, Contact Data, Technical Data, and Usage Data.
+              </p>
+
+              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">
+                2. How We Use Your Data
+              </h2>
+              <p>
+                We will only use your personal data when the law allows us to.
+                Most commonly, we will use your personal data in the following
+                circumstances:
               </p>
               <ul className="list-disc pl-5 space-y-2">
-                <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
-                <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
-                <li>Where we need to comply with a legal or regulatory obligation.</li>
+                <li>
+                  Where we need to perform the contract we are about to enter
+                  into or have entered into with you.
+                </li>
+                <li>
+                  Where it is necessary for our legitimate interests (or those
+                  of a third party) and your interests and fundamental rights do
+                  not override those interests.
+                </li>
+                <li>
+                  Where we need to comply with a legal or regulatory obligation.
+                </li>
               </ul>
 
-              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">3. Data Security</h2>
+              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">
+                3. Data Security
+              </h2>
               <p>
-                We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know.
+                We have put in place appropriate security measures to prevent
+                your personal data from being accidentally lost, used or
+                accessed in an unauthorized way, altered or disclosed. In
+                addition, we limit access to your personal data to those
+                employees, agents, contractors and other third parties who have
+                a business need to know.
               </p>
 
-              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">4. Contact Us</h2>
+              <h2 className="font-sans font-bold text-[18px] uppercase mt-8">
+                4. Contact Us
+              </h2>
               <p>
-                If you have any questions about this privacy policy or our privacy practices, please contact us at hello@yellowstudio.com.
+                If you have any questions about this privacy policy or our
+                privacy practices, please contact us at hello@yellowstudio.com.
               </p>
             </div>
           </Reveal>
         </section>
-
       </main>
       <Footer />
     </div>

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
-import { CTABanner } from '../components/CTABanner';
-import { Reveal } from '../components/Reveal';
-import { insights } from '../data/insights';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+import { CTABanner } from "../components/CTABanner";
+import { Reveal } from "../components/Reveal";
+import { insights } from "../data/insights";
 
 export const InsightsPage: React.FC = () => {
   useEffect(() => {
@@ -14,9 +14,8 @@ export const InsightsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans">
       <Navbar />
-      
+
       <main className="w-full flex-grow flex flex-col items-center">
-        
         {/* HERO */}
         <section className="w-full max-w-content px-6 md:px-10 mx-auto pt-[120px] pb-[80px] text-center">
           <Reveal>
@@ -26,7 +25,8 @@ export const InsightsPage: React.FC = () => {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="font-sans text-[16px] md:text-[18px] leading-[1.6] text-[#222] max-w-[600px] mx-auto">
-              Deep-dives from our team on design, code and how to ship smarter as an agency.
+              Deep-dives from our team on design, code and how to ship smarter
+              as an agency.
             </p>
           </Reveal>
         </section>
@@ -35,11 +35,15 @@ export const InsightsPage: React.FC = () => {
         <section className="w-full max-w-content px-6 md:px-10 mx-auto pb-[120px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[32px] gap-y-[64px]">
             {insights.map((article, index) => (
-              <Link to={`/insights/${article.id}`} key={article.id} className="flex flex-col group cursor-pointer">
+              <Link
+                to={`/insights/${article.id}`}
+                key={article.id}
+                className="flex flex-col group cursor-pointer"
+              >
                 <Reveal delay={index * 0.05}>
                   <div className="w-full aspect-[4/3] overflow-hidden rounded-[16px] bg-[#F5F5F0] mb-[24px] flex items-center justify-center p-12">
-                    <img 
-                      src={article.image} 
+                    <img
+                      src={article.image}
                       alt={article.title}
                       className="w-full h-full object-contain mix-blend-multiply filter grayscale contrast-125 transition-transform duration-500 group-hover:scale-105"
                     />

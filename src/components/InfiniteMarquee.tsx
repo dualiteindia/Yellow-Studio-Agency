@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { cn } from '../utils/cn';
+import React, { useEffect, useRef } from "react";
+import { cn } from "../utils/cn";
 
 interface InfiniteMarqueeProps<T> {
   items: T[];
@@ -23,24 +23,21 @@ export const InfiniteMarquee = <T,>({
 
   useEffect(() => {
     if (!scrollerRef.current) return;
-    
+
     const scrollerContent = scrollerRef.current;
-    
+
     // We duplicate the items 4 times to ensure we cover the viewport even if items are small.
     // The animation moves from 0% to -25% (which corresponds to the width of one set).
     // This creates a seamless loop.
     const animation = scrollerContent.animate(
-      [
-        { transform: 'translateX(0)' },
-        { transform: 'translateX(-25%)' }
-      ],
+      [{ transform: "translateX(0)" }, { transform: "translateX(-25%)" }],
       {
         duration: speed * 1000,
         iterations: Infinity,
-        easing: 'linear'
+        easing: "linear",
       }
     );
-    
+
     animationRef.current = animation;
 
     return () => animation.cancel();
@@ -61,20 +58,20 @@ export const InfiniteMarquee = <T,>({
   };
 
   return (
-    <div 
+    <div
       className={cn("w-full overflow-hidden", className)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div 
-        ref={scrollerRef}
-        className="flex w-max"
-      >
+      <div ref={scrollerRef} className="flex w-max">
         {/* Render 4 sets of items for robust seamless looping */}
         {[...Array(4)].map((_, setIndex) => (
-          <div 
+          <div
             key={`set-${setIndex}`}
-            className={cn("flex shrink-0 items-center justify-around", itemClassName)}
+            className={cn(
+              "flex shrink-0 items-center justify-around",
+              itemClassName
+            )}
           >
             {items.map((item, index) => (
               <React.Fragment key={`item-${setIndex}-${index}`}>

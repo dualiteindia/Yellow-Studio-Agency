@@ -1,15 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { WorkPage } from './pages/WorkPage';
-import { ProjectDetailPage } from './pages/ProjectDetailPage';
-import { ServicesPage } from './pages/ServicesPage';
-import { InsightsPage } from './pages/InsightsPage';
-import { InsightDetailPage } from './pages/InsightDetailPage';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
-import { PrivacyPolicy } from './pages/PrivacyPolicy';
-import { TermsConditions } from './pages/TermsConditions';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { WorkPage } from "./pages/WorkPage";
+import { ProjectDetailPage } from "./pages/ProjectDetailPage";
+import { ServicesPage } from "./pages/ServicesPage";
+import { InsightsPage } from "./pages/InsightsPage";
+import { InsightDetailPage } from "./pages/InsightDetailPage";
+import { AboutPage } from "./pages/AboutPage";
+import { ContactPage } from "./pages/ContactPage";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { TermsConditions } from "./pages/TermsConditions";
 
 function App() {
   return (

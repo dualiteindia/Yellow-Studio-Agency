@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
-import { CTABanner } from '../components/CTABanner';
-import { Reveal } from '../components/Reveal';
+import React, { useEffect } from "react";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+import { CTABanner } from "../components/CTABanner";
+import { Reveal } from "../components/Reveal";
 
 interface ServiceSectionProps {
   title: string;
@@ -15,7 +15,12 @@ interface ServiceSectionProps {
   };
 }
 
-const ServiceSection: React.FC<ServiceSectionProps> = ({ title, description, tags, images }) => (
+const ServiceSection: React.FC<ServiceSectionProps> = ({
+  title,
+  description,
+  tags,
+  images,
+}) => (
   <div className="flex flex-col md:flex-row gap-12 md:gap-24 border-t border-gray-100 py-[80px] md:py-[100px] first:border-t-0">
     {/* Left: Title */}
     <div className="w-full md:w-1/4">
@@ -29,26 +34,37 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ title, description, tag
     {/* Right: Content */}
     <div className="w-full md:w-3/4">
       <div className="flex flex-col gap-8">
-        
         {/* Image Collage */}
         <div className="flex gap-4 h-[300px] md:h-[480px]">
           {/* Large Image */}
           <Reveal className="w-2/3 h-full">
             <div className="w-full h-full bg-gray-100 rounded-[20px] overflow-hidden">
-              <img src={images.large} alt={`${title} Main`} className="w-full h-full object-cover" />
+              <img
+                src={images.large}
+                alt={`${title} Main`}
+                className="w-full h-full object-cover"
+              />
             </div>
           </Reveal>
-          
+
           {/* Stacked Small Images */}
           <div className="w-1/3 flex flex-col gap-4 h-full">
             <Reveal className="w-full h-1/2" delay={0.1}>
               <div className="w-full h-full bg-gray-100 rounded-[20px] overflow-hidden">
-                <img src={images.smallTop} alt={`${title} Detail 1`} className="w-full h-full object-cover" />
+                <img
+                  src={images.smallTop}
+                  alt={`${title} Detail 1`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </Reveal>
             <Reveal className="w-full h-1/2" delay={0.2}>
               <div className="w-full h-full bg-gray-100 rounded-[20px] overflow-hidden">
-                <img src={images.smallBottom} alt={`${title} Detail 2`} className="w-full h-full object-cover" />
+                <img
+                  src={images.smallBottom}
+                  alt={`${title} Detail 2`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </Reveal>
           </div>
@@ -60,28 +76,38 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ title, description, tag
             {description}
           </p>
           <div className="flex flex-wrap gap-2">
-            {tags.map(tag => (
-              <span key={tag} className="px-3 py-1.5 bg-gray-100 rounded-[4px] text-[11px] font-bold uppercase tracking-wide text-black/70">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1.5 bg-gray-100 rounded-[4px] text-[11px] font-bold uppercase tracking-wide text-black/70"
+              >
                 {tag}
               </span>
             ))}
           </div>
         </Reveal>
-
       </div>
     </div>
   </div>
 );
 
 // Reusing project images + extras for consistent visual language
-const IMG_RELATION = "https://www.dropbox.com/scl/fi/3pnz9pgh97018aef11zs5/2148792986.avif?rlkey=dla4wtgu4nkjw9mq3dg7gwioa&st=3a6bkufm&raw=1";
-const IMG_GREY_SPACE = "https://www.dropbox.com/scl/fi/cg4843m1hx0c1eakcg425/3d-rendered-abstract-design-elements-composition.avif?rlkey=rhgofq07xd0crxa9z1blepih3&st=hxqcqmhn&raw=1";
-const IMG_REFLECTIONS = "https://www.dropbox.com/scl/fi/r85x2ktupilytyu094slu/envato-labs-image-edit-19.avif?rlkey=yg5zv0uxa4m2aah69z1x0qyvr&st=5yr9ewc0&raw=1";
-const IMG_BUBBLE = "https://www.dropbox.com/scl/fi/ih7guwro5yjfm9677o3og/20849708_6364976.avif?rlkey=rye7rt3g1v4w4sfuirsxk3jki&st=huzug4iz&raw=1";
-const IMG_REACT = "https://www.dropbox.com/scl/fi/ahbp985x38l5cqy59r56w/9866.avif?rlkey=xb19w8wmgp091u4bobwh7a51x&st=wk7rx4gi&raw=1";
-const IMG_EXTRA_1 = "https://www.dropbox.com/scl/fi/rjfdd1nb4kmoh94bdlouj/20443691_6299913-1.avif?rlkey=oidi0idkunyto4w0uk1kndlc7&st=ogun4h9t&raw=1";
-const IMG_EXTRA_2 = "https://www.dropbox.com/scl/fi/1v6ykynb49wnwuh0f7kwp/74879019_9808781.avif?rlkey=3yx3po8nqcplwjj5mkk7bhpyp&st=eeujr2vn&raw=1";
-const IMG_EXTRA_3 = "https://www.dropbox.com/scl/fi/z8ov7vjd2ydtesx0xvkob/8422370_3897478.avif?rlkey=2bptpi5sysgnnz832qxr8jcx2&st=dyeny17s&raw=1";
+const IMG_RELATION =
+  "https://www.dropbox.com/scl/fi/3pnz9pgh97018aef11zs5/2148792986.avif?rlkey=dla4wtgu4nkjw9mq3dg7gwioa&st=3a6bkufm&raw=1";
+const IMG_GREY_SPACE =
+  "https://www.dropbox.com/scl/fi/cg4843m1hx0c1eakcg425/3d-rendered-abstract-design-elements-composition.avif?rlkey=rhgofq07xd0crxa9z1blepih3&st=hxqcqmhn&raw=1";
+const IMG_REFLECTIONS =
+  "https://www.dropbox.com/scl/fi/r85x2ktupilytyu094slu/envato-labs-image-edit-19.avif?rlkey=yg5zv0uxa4m2aah69z1x0qyvr&st=5yr9ewc0&raw=1";
+const IMG_BUBBLE =
+  "https://www.dropbox.com/scl/fi/ih7guwro5yjfm9677o3og/20849708_6364976.avif?rlkey=rye7rt3g1v4w4sfuirsxk3jki&st=huzug4iz&raw=1";
+const IMG_REACT =
+  "https://www.dropbox.com/scl/fi/ahbp985x38l5cqy59r56w/9866.avif?rlkey=xb19w8wmgp091u4bobwh7a51x&st=wk7rx4gi&raw=1";
+const IMG_EXTRA_1 =
+  "https://www.dropbox.com/scl/fi/rjfdd1nb4kmoh94bdlouj/20443691_6299913-1.avif?rlkey=oidi0idkunyto4w0uk1kndlc7&st=ogun4h9t&raw=1";
+const IMG_EXTRA_2 =
+  "https://www.dropbox.com/scl/fi/1v6ykynb49wnwuh0f7kwp/74879019_9808781.avif?rlkey=3yx3po8nqcplwjj5mkk7bhpyp&st=eeujr2vn&raw=1";
+const IMG_EXTRA_3 =
+  "https://www.dropbox.com/scl/fi/z8ov7vjd2ydtesx0xvkob/8422370_3897478.avif?rlkey=2bptpi5sysgnnz832qxr8jcx2&st=dyeny17s&raw=1";
 
 export const ServicesPage: React.FC = () => {
   useEffect(() => {
@@ -91,9 +117,8 @@ export const ServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans">
       <Navbar />
-      
+
       <main className="w-full flex-grow flex flex-col items-center">
-        
         {/* HERO */}
         <section className="w-full max-w-content px-6 md:px-10 mx-auto pt-[120px] pb-[80px] text-center">
           <Reveal>
@@ -103,47 +128,63 @@ export const ServicesPage: React.FC = () => {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="font-sans text-[16px] md:text-[18px] leading-[1.6] text-[#222] max-w-[600px] mx-auto">
-              How we turn big and bold ideas into digital-first products. This is what we can help your business with.
+              How we turn big and bold ideas into digital-first products. This
+              is what we can help your business with.
             </p>
           </Reveal>
         </section>
 
         {/* SERVICES LIST */}
         <section className="w-full max-w-content px-6 md:px-10 mx-auto pb-[120px]">
-          
-          <ServiceSection 
+          <ServiceSection
             title="DESIGN"
             description="Great ideas need clear, human-centred visuals. We turn insight into brands, user-interfaces and motion that feels right."
-            tags={['Website design', 'Product design', 'Brand identity systems', 'Rapid prototyping', 'Design systems']}
+            tags={[
+              "Website design",
+              "Product design",
+              "Brand identity systems",
+              "Rapid prototyping",
+              "Design systems",
+            ]}
             images={{
               large: IMG_RELATION,
               smallTop: IMG_EXTRA_2,
-              smallBottom: IMG_EXTRA_1
+              smallBottom: IMG_EXTRA_1,
             }}
           />
 
-          <ServiceSection 
+          <ServiceSection
             title="DEVELOPMENT"
             description="We bring the experience to live in working code. Fast, accessible and future-proof builds turn sketches into stable, scalable products."
-            tags={['Web app development', 'Front-end engineering', 'Shopify & headless ecommerce', 'Performance audits']}
+            tags={[
+              "Web app development",
+              "Front-end engineering",
+              "Shopify & headless ecommerce",
+              "Performance audits",
+            ]}
             images={{
               large: IMG_REACT,
               smallTop: IMG_BUBBLE,
-              smallBottom: IMG_EXTRA_3
+              smallBottom: IMG_EXTRA_3,
             }}
           />
 
-          <ServiceSection 
+          <ServiceSection
             title="MARKETING"
             description="Launches should land with impact. We pair data, story and design to drive awareness, adoption and growth."
-            tags={['Social media campaigns', 'Content & email marketing', 'Paid search', 'SEO strategy', 'Launch asset kits']}
+            tags={[
+              "Social media campaigns",
+              "Content & email marketing",
+              "Paid search",
+              "SEO strategy",
+              "Launch asset kits",
+            ]}
             images={{
               large: IMG_REFLECTIONS,
               smallTop: IMG_GREY_SPACE,
-              smallBottom: IMG_EXTRA_2
+              smallBottom: IMG_EXTRA_2,
             }}
           />
-
         </section>
 
         <CTABanner />
