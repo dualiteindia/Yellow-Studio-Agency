@@ -66,4 +66,3 @@ The design uses a strict spacing system based on the provided specifications.
 - **Hover States**:
   - Buttons lift (`-3px`) and shadow.
   - Links underline or invert colors.
-  - Images scale slightly (`1.05x`) on hover.
